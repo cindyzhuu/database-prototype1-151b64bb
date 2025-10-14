@@ -48,7 +48,7 @@ export function NewEntryDialog({ open, onOpenChange, onEntryCreated }: NewEntryD
       media_url: mediaUrl.trim() || null,
       media_annotation: mediaAnnotation.trim() || null,
       vibe: vibe || null,
-    });
+    } as any);
 
     setLoading(false);
 
@@ -142,7 +142,6 @@ export function NewEntryDialog({ open, onOpenChange, onEntryCreated }: NewEntryD
                 <SelectValue placeholder="Select a vibe..." />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="">None</SelectItem>
                 <SelectItem value="happy">Happy 😊</SelectItem>
                 <SelectItem value="sad">Sad 😢</SelectItem>
                 <SelectItem value="anxious">Anxious 😰</SelectItem>
